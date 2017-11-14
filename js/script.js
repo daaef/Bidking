@@ -1,7 +1,7 @@
 
 $(window).on('load', function () {
-    let labels = ['days', 'hrs', 'minutes', 'seconds']
-        , nextYear = '2018/12/25'
+    let labels = ['weeks', 'days', 'hrs', 'minutes', 'seconds']
+        , nextYear = '2017/12/25'
         , template = _.template($('#main-example-template').html())
         , currDate = '00:00:00:00:00'
         , nextDate = '00:00:00:00:00'
@@ -38,7 +38,7 @@ $(window).on('load', function () {
     });
     // Starts the countdown
     $example.countdown(nextYear, function (event) {
-        var newDate = event.strftime('%d:%H:%M:%S')
+        var newDate = event.strftime('%w:%d:%H:%M:%S')
             , data;
         if (newDate !== nextDate) {
             currDate = nextDate;
@@ -86,9 +86,14 @@ $(window).on('load', function () {
             --seconds;
             hours = (minutes < 0) ? --hours : hours;
             minutes = (seconds < 0) ? --minutes : minutes;
-            if (hours < 1 && minutes < 1 && seconds < 1) clearInterval(interval);
             seconds = (seconds < 0) ? 59 : seconds;
             seconds = `${(seconds < 10) ? '0' + seconds : seconds}`;
+            if (hours < 1 && minutes < 1 && seconds < 1){
+                // clearInterval(interval);
+                hours = "00";
+                seconds = "15";
+                minutes = "00";
+            }
             //minutes = (minutes < 10) ?  minutes : minutes;
             $this.html(`${hours}:${minutes}:${seconds}`);
             timer2 =`${hours}:${minutes}:${seconds}`;
