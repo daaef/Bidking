@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 19px;
+    font-weight: 300;
+    font-family: LatoWeb;
+}
+header{
+    background: url(../img/1.jpg) no-repeat;
+    min-height: 100vh;
+    width:100%;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.logo{
+    height: 130px;
+}
+.time.weeks.flip{
+    display: none;
+}
+.message{
+    font-family: LatoWeb;
+    color: #ffffff;
+    margin: 5px 0px;
+    letter-spacing: 2px;
+    /*font-weight: 100;*/
+}
+.date{
+    font-family: LatoWeb, serif !important;
+    font-weight: bold;
+    color: #e9c907;
+}
+
+img{
+    height: 100%;
+}
+.uk-card-primary.uk-card-body .uk-slidenav,
+.uk-card-primary>:not([class*=uk-card-media]) .uk-slidenav,
+.uk-card-secondary.uk-card-body .uk-slidenav,
+.uk-card-secondary>:not([class*=uk-card-media]) .uk-slidenav,
+.uk-light .uk-slidenav,
+.uk-offcanvas-bar .uk-slidenav,
+.uk-overlay-primary .uk-slidenav,
+.uk-section-primary:not(.uk-preserve-color) .uk-slidenav,
+.uk-section-secondary:not(.uk-preserve-color) .uk-slidenav,
+.uk-tile-primary:not(.uk-preserve-color) .uk-slidenav,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav{
+    color: #e9c907;
+}
+.bidPrice,.countdown{
+    line-height: 2rem;
+    font-size: 1.2rem;
+
+    font-weight: 500;
+}
+.bidder{
+    color: dimgrey;
+    font-weight: 600;
+    line-height: 2.2rem;
+}
+.bidPrice{
+    color: forestgreen;
+}
+.countdown{
+    color: #c83e1f;
+}
+.bidBtn{
+    background: linear-gradient(#ffdf17 63%, #887712);
+    color: white;
+    font-weight: 900;
+}
+.purp{
+    color:rebeccapurple;
+    font-size: 0.85em;
+    font-weight: 700;
+    height:100%;
+}
+footer.uk-section.uk-section-secondary.uk-padding-small.uk-text-center.uk-text-uppercase{
+    background-color: #000;
+    color: #fff;
+}
