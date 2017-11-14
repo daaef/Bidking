@@ -16,9 +16,9 @@ header{
 .logo{
     height: 130px;
 }
-.time.weeks.flip{
+/*.time.weeks.flip{
     display: none;
-}
+}*/
 .message{
     font-family: LatoWeb;
     color: #ffffff;
