@@ -4,10 +4,10 @@
     box-sizing: border-box;
     font-size: 19px;
     font-weight: 300;
-    font-family: LatoWeb;
+    font-family: LatoWeb,sans-serif;
 }
 header{
-    background: url(../img/1.jpg) no-repeat;
+    background: url(../img/bg.png) no-repeat;
     min-height: 100vh;
     width:100%;
     background-size: 100% 100%;
@@ -20,7 +20,7 @@ header{
     display: none;
 }*/
 .message{
-    font-family: LatoWeb;
+    font-family: LatoWeb,sans-serif;
     color: #ffffff;
     margin: 5px 0px;
     letter-spacing: 2px;
@@ -81,14 +81,26 @@ footer.uk-section.uk-section-secondary.uk-padding-small.uk-text-center.uk-text-u
     background-color: #000;
     color: #fff;
 }
+@media (max-width: 860px) {
+    .uk-slideshow-items img{
+        object-fit: contain;
+    }
+}
 @media (max-width: 440px) {
     .purp{
         height: 50px;
         max-height: 50px;
         font-size: .7em;
     }
+    .bidder{
+        font-size: .7em;
+    }
+    .bidBtn{
+        padding:1px 5px;
+    }
 }
 .label{
     color: white;
     margin-top: 10px;
 }
+

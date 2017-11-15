@@ -10,7 +10,7 @@ $(window).on('load', function () {
 
     // Parse countdown string to an object
     function strfobj(str) {
-        var parsed = str.match(parser)
+        let parsed = str.match(parser)
             , obj = {};
         labels.forEach(function (label, i) {
             obj[label] = parsed[i]
@@ -19,7 +19,7 @@ $(window).on('load', function () {
     }
     // Return the time components that diffs
     function diff(obj1, obj2) {
-        var diff = [];
+        let diff = [];
         labels.forEach(function (key) {
             if (obj1[key] !== obj2[key]) {
                 diff.push(key);
@@ -28,7 +28,7 @@ $(window).on('load', function () {
         return diff;
     }
     // Build the layout
-    var initData = strfobj(currDate);
+    let initData = strfobj(currDate);
     labels.forEach(function (label, i) {
         $example.append(template({
             curr: initData[label]
@@ -64,30 +64,48 @@ $(window).on('load', function () {
         }
     });
     let a = [$('[bid-ctrl="b1"]').attr('count'),
-            $('[bid-ctrl="b2"]').attr('count'),
-            $('[bid-ctrl="b3"]').attr('count'),
-            $('[bid-ctrl="b4"]').attr('count'),];
-    $('[bid-ctrl][count]').each(function () {
-        let $this = $(this);
-        console.log($this);
-        let i = a.indexOf($(this).attr('count'));
+        $('[bid-ctrl="b2"]').attr('count'),
+        $('[bid-ctrl="b3"]').attr('count'),
+        $('[bid-ctrl="b4"]').attr('count'),];
+    $('.parent').each(function () {
+        let $this = $(this).find('[count]');
+        let $btn = $(this).find('button[bid-ctrl]');
+        let i = a.indexOf($this.attr('count'));
         let timer2 = a[i];
-        console.log(timer2);
+        $btn.click(function(){
+            timer2 = "00:00:15";
+        });
+        // console.log(timer2);
         var interval = setInterval(function() {
 
             var timer = timer2.split(':');
             //by parsing integer, I avoid all extra string processing
             var hours = parseInt(timer[0], 10);
-            console.log(hours);
+            // console.log(hours);
             var minutes = parseInt(timer[1], 10);
-            console.log(minutes);
+            // console.log(minutes);
             var seconds = parseInt(timer[2], 10);
-            console.log(seconds);
+            // console.log(seconds);
             --seconds;
-            hours = (minutes < 0) ? --hours : hours;
-            minutes = (seconds < 0) ? --minutes : minutes;
-            seconds = (seconds < 0) ? 59 : seconds;
+            // hours = (minutes < 0) ? --hours : hours;
+            // hours = `${(hours < 10) ? '0' + hours : hours}`;
+            // minutes = (seconds < 0) ? --minutes : minutes;
+            // minutes = (minutes < 0) ? 59 : minutes;
+            // minutes = `${(minutes < 10) ? '0' + minutes : minutes}`;
+            // seconds = (seconds < 0) ? 59 : seconds;
+            // seconds = `${(seconds < 10) ? '0' + seconds : seconds}`;
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
+                if (minutes < 0) {
+                    hours--;
+                    minutes = 59;
+                }
+            }
+            hours = `${(hours < 10) ? '0' + hours : hours}`;
+            minutes = `${(minutes < 10) ? '0' + minutes : minutes}`;
             seconds = `${(seconds < 10) ? '0' + seconds : seconds}`;
+
             if (hours < 1 && minutes < 1 && seconds < 1){
                 // clearInterval(interval);
                 hours = "00";
