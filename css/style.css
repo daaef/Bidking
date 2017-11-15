@@ -102,10 +102,6 @@ footer.uk-section.uk-section-secondary.uk-padding-small.uk-text-center.uk-text-u
     padding: 0px 10px;
 }
 @media (max-width: 860px) {
-    .uk-slideshow-items img{
-        object-fit: contain;
-        padding: 0px 10px;
-    }
     header{
         background-size: cover;
         background-attachment: fixed;
