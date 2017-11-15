@@ -10,7 +10,8 @@ header{
     background: url(../img/bg.png) no-repeat;
     min-height: 100vh;
     width:100%;
-    background-size: 100% 100%;
+    background-position: center -60px;
+    background-size: cover;
     background-attachment: fixed;
 }
 .logo{
@@ -67,30 +68,55 @@ img{
 }
 .bidBtn{
     background: linear-gradient(#ffdf17 63%, #887712);
-    color: white;
+    color: #f0e2ff !important;
+    text-shadow: 0px 0px 20px #564e20;
     font-weight: 900;
+    font-size: 0.66em;
+}
+.bidBtn:hover,.bidBtn:active,.bidBtn:focus{
+    background: linear-gradient(#b5a314 63%, #635211);
+    color: white!important;
+    font-weight: 700;
+    font-size: 0.66em;
 }
 .purp{
     color:rebeccapurple;
     font-size: 0.85em;
     font-weight: 700;
-    height: 50px;
+    line-height: 25px;
     max-height: 50px;
+}
+.uk-card-header{
+    padding: 5px 15px;
+}
+.flip-clock__slot {
+    font-size: 19px;
+    color: #FFFFFF;
 }
 footer.uk-section.uk-section-secondary.uk-padding-small.uk-text-center.uk-text-uppercase{
     background-color: #000;
     color: #fff;
 }
+.uk-slideshow-items img{
+    object-fit: contain;
+    padding: 0px 10px;
+}
 @media (max-width: 860px) {
     .uk-slideshow-items img{
         object-fit: contain;
+        padding: 0px 10px;
+    }
+    header{
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
     }
 }
 @media (max-width: 440px) {
     .purp{
         height: 50px;
         max-height: 50px;
-        font-size: 0.45em;
+        font-size: 0.65em;
     }
     .bidder{
         font-size: .7em;
@@ -98,9 +124,120 @@ footer.uk-section.uk-section-secondary.uk-padding-small.uk-text-center.uk-text-u
     .bidBtn{
         padding:1px 5px;
     }
+    .flip-clock__slot {
+        font-size: 14px;
+        color: #FFFFFF;
+    }
 }
 .label{
     color: white;
     margin-top: 10px;
 }
 
+
+.flip-clock {
+    text-align: center;
+    perspective: 400px;
+    margin: 20px auto;
+}
+.flip-clock *,
+.flip-clock *:before,
+.flip-clock *:after {
+    box-sizing: border-box;
+}
+.flip-clock__piece {
+    display: inline-block;
+    margin: 0 5px;
+}
+.card {
+    display: block;
+    position: relative;
+    /*padding-bottom: 0.72em;*/
+    /*font-size: 10vw;*/
+    line-height: 100%;
+}
+.card__top,
+.card__bottom,
+.card__back::before,
+.card__back::after {
+    display: block;
+    height: 50%;
+    color: #ccc;
+    background: #222;
+    padding: 0.25em 0.25em;
+    border-radius: 0.15em 0.15em 0 0;
+    backface-visiblity: hidden;
+    transform-style: preserve-3d;
+    width: 2.8em;
+}
+.card__bottom {
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-top: solid 1px #000;
+    background: #393939;
+    border-radius: 0 0 0.15em 0.15em;
+    pointer-events: none;
+    overflow: hidden;
+}
+.card__bottom::after {
+    display: block;
+    margin-top: -0.72em;
+}
+.card__back::before,
+.card__bottom::after {
+    content: attr(data-value);
+}
+.card__back {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0%;
+    pointer-events: none;
+}
+.card__back::before {
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+.flip .card__back::before {
+    animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
+    animation-fill-mode: both;
+    transform-origin: center bottom;
+}
+.flip .card__back .card__bottom {
+    transform-origin: center top;
+    animation-fill-mode: both;
+    animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1);
+}
+@keyframes flipTop {
+    0% {
+        transform: rotateX(0deg);
+        z-index: 2;
+    }
+    0%,
+    99% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(-90deg);
+        opacity: 0;
+    }
+}
+@keyframes flipBottom {
+    0%,
+    50% {
+        z-index: -1;
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+    51% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+        z-index: 5;
+    }
+}
