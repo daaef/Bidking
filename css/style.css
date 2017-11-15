@@ -68,8 +68,8 @@ img{
 }
 .bidBtn{
     background: linear-gradient(#ffdf17 63%, #887712);
-    color: #f0e2ff !important;
-    text-shadow: 0px 0px 20px #564e20;
+    color: #FFFFFF !important;
+    text-shadow: 0px 0px 20px #00ff20;
     font-weight: 900;
     font-size: 0.66em;
 }
