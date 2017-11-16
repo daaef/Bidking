@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fe50237-f4a3-4ca1-bb4f-66fa90b92ca3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -59,8 +60,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+            <state relative-caret-position="189">
+              <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -224,7 +225,7 @@
       <workItem from="1510684246946" duration="14436000" />
       <workItem from="1510744977727" duration="7339000" />
       <workItem from="1510764542781" duration="524000" />
-      <workItem from="1510771013209" duration="9774000" />
+      <workItem from="1510771013209" duration="10694000" />
     </task>
     <task id="LOCAL-00001" summary="edited the countdown button">
       <created>1510759184950</created>
@@ -233,11 +234,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510759184950</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="bg fixes">
+      <created>1510815560995</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1510815560996</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85940000" />
+    <option name="totallyTimeSpent" value="86860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1040" height="754" extended-state="6" />
@@ -292,7 +300,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="edited the countdown button" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited the countdown button" />
+    <MESSAGE value="bg fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="bg fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -624,8 +633,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+        <state relative-caret-position="189">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding />
         </state>
       </provider>

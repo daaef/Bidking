@@ -7,15 +7,16 @@
     font-family: LatoWeb,sans-serif;
 }
 html{
-    background-color: #000000;
-}
-header{
+    background-color: #191919;
     background: url(../img/bg.png) no-repeat;
-    min-height: 100vh;
-    width:100%;
     background-position: center -60px;
     background-size: cover;
     background-attachment: fixed;
+}
+header{
+
+    min-height: 100vh;
+    width:100%;
 }
 .logo{
     height: 130px;
