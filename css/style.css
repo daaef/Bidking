@@ -6,6 +6,9 @@
     font-weight: 300;
     font-family: LatoWeb,sans-serif;
 }
+html{
+    background-color: #000000;
+}
 header{
     background: url(../img/bg.png) no-repeat;
     min-height: 100vh;
